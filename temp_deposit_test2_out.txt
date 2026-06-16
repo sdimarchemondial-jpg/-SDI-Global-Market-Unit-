@@ -1,0 +1,7 @@
+login True
+url /agent/deposit/
+status 400
+redirect_url None
+deposit_count 1
+client_exists True
+client_code ACC7FA3B855

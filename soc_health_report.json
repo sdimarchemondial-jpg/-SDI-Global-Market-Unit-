@@ -1,0 +1,30 @@
+{
+  "system": "SOC IA Cybersécurité",
+  "version": "2.0",
+  "timestamp": "2026-05-15T12:00:03.346441",
+  "status": "PASS",
+  "checks_total": 19,
+  "checks_passed": 19,
+  "checks_failed": 0,
+  "details": {
+    "python_marketplace/ai_cybersecurity.py": true,
+    "python_marketplace/api_security.py": true,
+    "python_marketplace/urls.py": true,
+    "template_marketplace/templates/marketplace/security_dashboard.html": true,
+    "template_marketplace/templates/marketplace/ai_security_chat.html": true,
+    "import_psutil": true,
+    "import_django": true,
+    "import_json": true,
+    "import_socket": true,
+    "import_subprocess": true,
+    "settings_marketplace": true,
+    "settings_INSTALLED_APPS": true,
+    "settings_MIDDLEWARE": true,
+    "ai_class_AICybersecurityEngine": true,
+    "ai_class_SOCPermissions": true,
+    "ai_method_analyze_system_security": true,
+    "ai_method_analyze_ports": true,
+    "ai_method_detect_anomalies": true,
+    "ai_method_ai_process_command": true
+  }
+}
