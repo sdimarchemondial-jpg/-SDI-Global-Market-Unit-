@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Modal Preview</title>
+<style>
+  :root{--border-color:#e6eefc;--primary-dark:#123}
+  body{font-family:Inter,Arial,Helvetica,sans-serif;margin:0;background:#f5f9ff}
+  .container{padding:40px}
+  /* ensure modal centered and visible */
+  #conversation-modal{display:flex;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);z-index:1000;align-items:center;justify-content:center}
+  #conversation-modal > div{background:#fff;border-radius:12px;width:90%;max-width:600px;max-height:80vh;display:flex;flex-direction:column}
+  #messages-container{flex:1;overflow:auto;padding:20px}
+  textarea{min-height:40px}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Preview du modal de conversation</h1>
+<p>Ce fichier affiche le HTML du modal tel que rendu.</p>
+</div>
+
+<div id="conversation-modal" style="display: flex; position: fixed; top: 0px; left: 0px; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); z-index: 1000; align-items: center; justify-content: center;">
+    <div style="background: white; border-radius: 12px; width: 90%; max-width: 600px; max-height: 80vh; display: flex; flex-direction: column;">
+      <div style="padding: 20px; border-bottom: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center;">
+        <h3 id="conv-user-name" style="margin: 0; color: var(--primary-dark);">Conversation</h3>
+        <button onclick="closeConversation()" style="background: none; border: none; font-size: 1.5rem; cursor: pointer;">✕</button>
+      </div>
+            
+      <div id="messages-container" style="flex: 1; overflow-y: auto; padding: 20px;">
+        <!-- Messages will be loaded here -->
+      </div>
+
+      <div style="padding: 20px; border-top: 1px solid var(--border-color);">
+        <form onsubmit="sendMessage(event)" style="display: flex; gap: 10px;">
+          <input type="hidden" name="csrfmiddlewaretoken" value="eLlOJNvtzwtMhrkwcHT2gKPC1BkKjb0RpZO7xsejPCjm8x5Lk3rgdSIBdbPwQ5zp">
+          <textarea id="message-input" placeholder="Écrivez votre message..." style="flex: 1; padding: 10px; border: 1px solid var(--border-color); border-radius: 6px; resize: vertical; min-height: 40px;" required=""></textarea>
+          <button type="submit" style="padding: 10px 20px; background: linear-gradient(135deg, #667eea, #764ba2); color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 600;">Envoyer</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
